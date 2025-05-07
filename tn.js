@@ -60,7 +60,9 @@ function loadTamilNaduCities(defaultCity) {
   citySelect.onchange = () => {
     const selected = citySelect.options[citySelect.selectedIndex];
     const url = selected.dataset.url;
-    if (url) window.location.href = url;
+    if (url && selected.value !== "") {
+  updatePetrolPrice();
+}
   };
 
   const container = document.getElementById("cityDropdownContainer");
