@@ -55,12 +55,17 @@ function loadStates(defaultState = "") {
   }
 }
 
-function loadCityFile(jsUrl) {
+function loadCityFile(jsUrl, defaultCity = "") {
   const oldScript = document.getElementById("cityScript");
   if (oldScript) oldScript.remove();
 
   const script = document.createElement("script");
   script.src = jsUrl;
   script.id = "cityScript";
+  script.onload = function () {
+    if (typeof loadTamilNaduCities === "function") {
+      loadTamilNaduCities(defaultCity);
+    }
+  };
   document.body.appendChild(script);
 }
