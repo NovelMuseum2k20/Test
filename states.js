@@ -50,7 +50,7 @@ function loadStates(defaultState = "") {
   if (defaultState) {
     const default = stateList.find(s => s.name === defaultState);
     if (default?.cityFile) {
-  loadCityFile(default.cityFile, defaultCity);
+  loadCityFile(default.cityFile, window.defaultCity || "");
 }
   }
 }
@@ -65,6 +65,9 @@ function loadCityFile(jsUrl, defaultCity = "") {
   script.onload = function () {
     if (typeof loadTamilNaduCities === "function") {
       loadTamilNaduCities(defaultCity);
+
+      // Now that city dropdown is loaded, call updatePetrolPrice
+      updatePetrolPrice();
     }
   };
   document.body.appendChild(script);
