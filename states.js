@@ -50,8 +50,8 @@ function loadStates(defaultState = "") {
   if (defaultState) {
     const default = stateList.find(s => s.name === defaultState);
     if (default?.cityFile) {
-      loadCityFile(default.cityFile);
-    }
+  loadCityFile(default.cityFile, defaultCity);
+}
   }
 }
 
