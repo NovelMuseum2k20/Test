@@ -1,6 +1,7 @@
 function loadTamilNaduCities(defaultCity) {
   const cities = [
-    { name: "Ariyalur", url: "https://www.frisqoo.com/p/cng-price-in-ariyalur.html" },
+  { name: "Select Your City", url: "https://www.frisqoo.com/p/cng-price-in-tamil-nadu.html" },
+  { name: "Ariyalur", url: "https://www.frisqoo.com/p/cng-price-in-ariyalur.html" },
   { name: "Chengalpattu", url: "https://www.frisqoo.com/p/cng-price-in-chengalpattu.html" },
   { name: "Chennai", url: "https://www.frisqoo.com/p/cng-price-in-chennai.html" },
   { name: "Coimbatore", url: "https://www.frisqoo.com/p/cng-price-in-coimbatore.html" },
